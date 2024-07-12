@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRi Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="brand">
+                <img src="dri-logo.png" alt="DRi Logo" id="logo"> <!-- Add your logo file here -->
+                <div id="monthDisplay"></div>
+            </div>
+            <div>
+                <button id="backButton">Back</button>
+                <button id="nextButton">Next</button>
+            </div>
+        </div>
+
+        <div id="weekdays">
+            <div>Sunday</div>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div>Saturday</div>
+        </div>
+
+        <div id="calendar"></div>
+    </div>
+
+<!-- New Event Modal -->
+<div id="newEventModal" class="modal">
+    <h2 id="eventText">Mark as Sober</h2>
+    <div id="soberStatusButtons">
+        <button id="soberButton" class="statusButton">Sober</button>
+        <button id="notSoberButton" class="statusButton">Not Sober</button>
+        <button id="clearButton" class="statusButton">Clear</button>
+    </div>
+    <textarea id="journalThoughts" placeholder="Write your thoughts..."></textarea>
+    <textarea id="journalSymptoms" placeholder="Write your symptoms..."></textarea>
+    <button id="saveButton">Save</button>
+    <button id="cancelButton">Cancel</button>
+</div>
+
+
+<!-- Delete Event Modal -->
+<div id="deleteEventModal" class="modal">
+    <h2 id="eventText">Mark as Not Sober</h2>
+    <div id="soberStatusButtons">
+        <button id="soberButton" class="statusButton">Sober</button>
+        <button id="notSoberButton" class="statusButton">Not Sober</button>
+    </div>
+    <button id="deleteButton">Delete</button>
+    <button id="closeButton">Close</button>
+</div>
+
+<div id="modalBackDrop"></div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
