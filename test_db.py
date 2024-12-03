@@ -14,3 +14,5 @@ with app.app_context():
     db.session.commit()
 
     print("Test data inserted successfully!")
+
+    """ insert tests for new databases """
