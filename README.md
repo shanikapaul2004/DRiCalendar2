@@ -70,3 +70,16 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgements
 
 We acknowledge the courage and strength of individuals battling addiction every day. This project is dedicated to providing support and resources for those on the path to recovery.
+
+<!-- We are going to need to alter this slightly to fulfill our proj requirements...
+i know that we need 
+1) overview
+2) describe all API routes 
+
+maybe
+3) how to run 
+4) dependencies
+5) known issues / future improvements
+
+--Sophia
+ -->
