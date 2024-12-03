@@ -23,3 +23,24 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(port=5001, debug=True)
+
+    
+
+"""need at least 5 routes... i am thinking we need 
+1) log journal entry
+2) log symptoms
+3) fetch symptoms from date
+4) fetch entry from date
+5) fetch all info for user (?)
+
+
+also need...
+1) create account
+2) update password
+3) login
+
+4) health check -- have above
+
+
+--Sophia
+"""
