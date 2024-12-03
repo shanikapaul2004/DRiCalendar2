@@ -21,3 +21,38 @@ class SobrietyLog(db.Model):
 
     # Relationship with User table
     user = db.relationship('User', backref=db.backref('logs', lazy=True))
+
+
+    """ I think we should divide the sobriety log part into different data bases:
+    for example we could split into 3 -- 
+    1) Sober = yes or no
+    2) Symptoms
+    3) journal log
+
+
+    copied:
+
+    class SobrietyLog(db.Model):
+        __tablename__ = 'sobriety_logs'
+        id = db.Column(db.Integer, primary_key=True)
+        user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+        date = db.Column(db.String(10), nullable=False)  # Format: YYYY-MM-DD
+        status = db.Column(db.String(20), nullable=False)  # 'sober' or 'not_sober'
+
+    class EmotionLog(db.Model):
+        __tablename__ = 'emotion_logs'
+        id = db.Column(db.Integer, primary_key=True)
+        user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+        date = db.Column(db.String(10), nullable=False)
+        emotion = db.Column(db.String(50), nullable=False)
+        note = db.Column(db.Text, nullable=True)
+
+    class Journal(db.Model):
+        id = db.Column(db.Integer, primary_key=True)
+        user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+        date = db.Column(db.String(10), nullable=False)
+        entry = db.Column(db.Text, nullable=False)
+       
+    
+    --Sophia
+         """
