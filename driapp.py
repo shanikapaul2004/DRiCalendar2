@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, requests
 from db_setup import db
 import os
 
@@ -23,6 +23,28 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(port=5001, debug=True)
+
+@app.route('/get-affirmation', methods=['GET'])
+def get_affirmation():
+    """
+    Fetches a random affirmation from affirmations.dev API.
+    """
+    try:
+        # Make a GET request to the external affirmation API
+        response = requests.get('https://www.affirmations.dev/')
+        
+        # Check if the API call was successful
+        if response.status_code == 200:
+            affirmation = response.json().get('affirmation', "No affirmation available at the moment.")
+            return jsonify({"affirmation": affirmation}), 200
+        else:
+            # Handle cases where the API returns an error
+            return jsonify({"error": "Failed to fetch affirmation"}), response.status_code
+    except requests.exceptions.RequestException as e:
+        # Handle network or other request-related errors
+        return jsonify({"error": "An error occurred while fetching the affirmation", "details": str(e)}), 500
+
+
 
     
 
