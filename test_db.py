@@ -1,4 +1,4 @@
-from driapp import app, db
+from routes.driapp import app, db
 from models import User, SobrietyLog
 
 # Use application context
