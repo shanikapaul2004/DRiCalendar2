@@ -44,3 +44,37 @@ also need...
 
 --Sophia
 """
+
+# not sure if this is the file you meant to create or not
+# idk what the .db extension is
+
+
+"""
+from flask import Flask, jsonify, request
+from werkzeug.security import generate_password_hash, check_password_hash #?????
+import sqlite3
+import requests
+import logging
+import os
+
+load_dotenv()
+
+app = Flask(__name__)
+
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default_secret')
+
+get_db_connection
+
+create_account
+
+login
+
+get_affirmation
+
+log_sobriety
+
+log_emotion
+
+log_journal
+
+"""
