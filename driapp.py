@@ -14,6 +14,15 @@ def health_check():
     """
     return jsonify({"status": "App is running"}), 200
 
+"""
+need:
+
+create account
+login
+update password
+
+"""
+
 @app.route('/fetch-affirmation', methods=['POST'])
 def fetch_affirmation():
     """
